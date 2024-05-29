@@ -7,7 +7,7 @@ function ListaUsuarios() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/usuario/obtenerusuario")
+      .get("/api/usuario/obtenerusuario")
       .then((res) => {
         // console.log(res.data)
         setdatausuario(res.data);
