@@ -26,19 +26,19 @@ function AgregarUsuario() {
     };
     axios
       .post(
-        "http://localhost:3000/api/usuario/agregarusuario",
+        "https://crud-mern-ztmt.onrender.com/api/usuario/agregarusuario",
         usuario
       )
       .then(() => {
-         Swal.fire({
-           title: "Usuario agregado correctamente!",
-           icon: "success",
-           showCancelButton: false,
-           confirmButtonText: "OK",
-         }).then(() => {
-           // Redirigir al inicio
-           window.location.href = "/";
-         });
+        Swal.fire({
+          title: "Usuario agregado correctamente!",
+          icon: "success",
+          showCancelButton: false,
+          confirmButtonText: "OK",
+        }).then(() => {
+          // Redirigir al inicio
+          window.location.href = "/";
+        });
       })
       .then((err) => {
         console.log(err);
