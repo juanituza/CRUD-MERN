@@ -14,7 +14,7 @@ const archivBD = mongo;
 app.use((req, res, next) => {
   res.header(
     "Access-Control-Allow-Origin",
-    "https://crud-mern-ztmt.onrender.com:5173"
+    "https://frontend-crud-mern.onrender.com:5173"
   );
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
