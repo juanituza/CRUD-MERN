@@ -1,4 +1,5 @@
 import express from "express";
+import config from "./config.js"
 import mongo from "./conexion.js";
 import usuario from "./rutas/usuario.js";
 import bodyParser from "body-parser";
@@ -9,10 +10,14 @@ const app = express();
 
 //Importar conexion mongoDB
 const archivBD = mongo; 
+//Server de escucha
+const PORT = 3000;
+app.listen(3000, () => console.log(`Listening in port: ${PORT}`));
+
 
 // Middleware para permitir CORS
 app.use((req, res, next) => {
-  const allowedOrigins = ["http://localhost:3000", "http://localhost:5173"];
+  const allowedOrigins = [config.backend_url.URL, config.frontend_url.URL];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
     res.header("Access-Control-Allow-Origin", origin);
@@ -22,9 +27,7 @@ app.use((req, res, next) => {
   next();
 });
 
-//Server de escucha
-const PORT = 3000;
-app.listen(3000, () => console.log(`Listening in port: ${PORT}`));
+
 
 
 app.use(bodyParser.json());
