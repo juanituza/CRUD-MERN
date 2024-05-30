@@ -19,7 +19,7 @@ function UsuarioIndividual(props) {
   function borrarUsuario(idUsuario) {
     axios
       .delete(
-        `${import.meta.env.VITE_BACKEND_URL}/api/usuario/agregarusuario/api/usuario/borrarUsuario?idUsuario=${idUsuario}`
+        `${import.meta.env.VITE_BACKEND_URL}/api/usuario/borrarUsuario?idUsuario=${idUsuario}`
       )
       .then(() => {
         Swal.fire({
