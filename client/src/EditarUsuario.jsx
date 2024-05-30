@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import {useParams} from 'react-router';
 import Swal from "sweetalert2";
 
+
 function EditarUsuario() {
   const params = useParams();
 
@@ -15,7 +16,9 @@ function EditarUsuario() {
     console.log(import.meta.env.VITE_BACKEND_URL);
     axios
       .post(
-        `${import.meta.env.VITE_BACKEND_URL}/api/usuario/obtenerDataUsuario?idUsuario=${params.idUsuario}`
+        `${
+          import.meta.env.VITE_BACKEND_URL
+        }/api/usuario/obtenerDataUsuario?idUsuario=${params.idUsuario}`
       )
       .then((res) => {
         // console.log(res.data[0]);
@@ -40,7 +43,9 @@ function EditarUsuario() {
     //Hacer la peticion
     axios
       .post(
-        "http://localhost:3000/api/usuario/actualizaUsuario",
+        `${
+          import.meta.env.VITE_BACKEND_URL
+        }/api/usuario/actualizaUsuario`,
         actualizarUsuario
       )
       .then(() => {
