@@ -12,6 +12,7 @@ function EditarUsuario() {
   const [telefono, setTelefono] = useState("");
 
   useEffect(() => {
+    console.log(import.meta.env.VITE_BACKEND_URL);
     axios
       .post(
         `${import.meta.env.VITE_BACKEND_URL}/api/usuario/obtenerDataUsuario?idUsuario=${params.idUsuario}`
