@@ -7,7 +7,7 @@ function ListaUsuarios() {
 
   useEffect(() => {
     axios
-      .get("/api/usuario/obtenerusuario")
+      .get( `${import.meta.env.VITE_BACKEND_URL}/api/usuario/obtenerusuario`)
       .then((res) => {
         // console.log(res.data)
         setdatausuario(res.data);

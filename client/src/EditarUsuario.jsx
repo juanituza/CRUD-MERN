@@ -14,7 +14,7 @@ function EditarUsuario() {
   useEffect(() => {
     axios
       .post(
-        `http://localhost:3000/api/usuario/obtenerDataUsuario?idUsuario=${params.idUsuario}`
+        `${import.meta.env.VITE_BACKEND_URL}/api/usuario/obtenerDataUsuario?idUsuario=${params.idUsuario}`
       )
       .then((res) => {
         // console.log(res.data[0]);

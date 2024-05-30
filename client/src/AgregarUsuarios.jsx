@@ -26,7 +26,7 @@ function AgregarUsuario() {
     };
     axios
       .post(
-        "https://crud-mern-ztmt.onrender.com/api/usuario/agregarusuario",
+        `${import.meta.env.VITE_BACKEND_URL}/api/usuario/agregarusuario`,
         usuario
       )
       .then(() => {
