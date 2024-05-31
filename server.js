@@ -17,7 +17,7 @@ const PORT = 3000;
 app.listen(3000, () => console.log(`Listening in port: ${PORT}`));
 
 
-const allowedOrigins = [config.backend_url.URL, config.frontend_url.URL];
+const allowedOrigins = [config.frontend_url.URL];
 
 const corsOptions = {
   origin: (origin, callback) => {
