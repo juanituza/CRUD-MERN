@@ -1,4 +1,6 @@
 import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
 import config from "./config.js"
 import mongo from "./conexion.js";
 import usuario from "./rutas/usuario.js";
@@ -27,6 +29,13 @@ app.use((req, res, next) => {
   next();
 });
 
+// // Obtener el directorio actual usando import.meta.url
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
+
+
+// // Servir archivos estáticos desde el directorio 'build'
+// app.use(express.static(path.join(__dirname, 'build')));
 
 
 

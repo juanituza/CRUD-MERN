@@ -4,6 +4,8 @@ import EditarUsuario from "./EditarUsuario";
 import ListaUsuarios from "./ListaUsuarios";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+
+
 function App() {
   return (
     <div className="App">
@@ -29,13 +31,13 @@ function App() {
                 <a
                   className="nav-link active"
                   aria-current="page"
-                  href={`${import.meta.env.VITE_BACKEND_URL}`}
+                  href="/"
                 >
                   Inicio
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/agregarusuario">
+                <a className="nav-link" href="agregarusuario">
                   Agregar Usuario
                 </a>
               </li>
@@ -47,7 +49,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ListaUsuarios />} exact></Route>
           <Route
-            path="/agregarusuario`"
+            path="/agregarusuario"
             element={<AgregarUsuario />}
             exact
           ></Route>
